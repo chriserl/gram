@@ -8,23 +8,21 @@
 }
 
 .light-shadow {
-  box-shadow: 0.45px 0.45px 1.5px $shadow-light;
+  box-shadow: 0.45px 0.45px 1.5px #fae1e9;
 }
 
 .medium-shadow {
-  box-shadow: $space-4 $space-4 $space-24 $shadow-mid;
+  box-shadow: $space-4 $space-4 $space-24 #fae1e9;
 }
 
 .large-shadow {
-  box-shadow: 0 $space-8 $space-12 $shadow-light;
+  box-shadow: 0 $space-20 $space-32 #d4d4d4c0;
 }
 
-button {
-  border: none;
-  @extend .pl;
+.button {
   @extend .px;
-  padding: $space-4 $space-8;
-  border-radius: $space-4;
+  border: none;
+  border-radius: $space-6;
   background: transparent;
 
   &:focus {

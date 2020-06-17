@@ -47,30 +47,34 @@
 
 //Buttons
 .btn-prim {
-  @extend button;
-  @extend .px;
+  @extend .button;
+  @extend .pxb;
   @extend .light-shadow;
+  padding: $space-12 $space-24;
   color: white;
   background: $main-gradient;
 }
 
 .btn-sec {
-  @extend button;
+  @extend .button;
   @extend .pxb;
   @extend .light-shadow;
-  color: $primary-color;
+  padding: $space-8 $space-20;
+  color: $sec-color;
   background: $light-gradient;
 }
 
 .btn-light {
-  @extend button;
+  @extend .button;
   @extend .px;
   @extend .medium-shadow;
+  padding: $space-12 $space-24;
   color: $sec-dark;
   background: white;
 }
 
 .icon-btn {
+  @extend .button;
   @extend .flex-center;
 
   span {
@@ -83,7 +87,7 @@
     @extend .flex-center;
   }
   .btn-icon {
-    width: $space-4;
+    width: $space-8;
   }
 }
 
@@ -95,8 +99,9 @@
   @extend .flex-center;
 
   .brand-icon {
-    width: $space-16;
-    margin-right: $space-8;
+    width: $space-32;
+    margin-right: $space-16;
+    opacity: 0.65;
   }
 
   .brand-name {
@@ -110,7 +115,7 @@
 nav {
   width: 92.5%;
   margin: 0 auto;
-  padding-top: $space-12;
+  padding: $space-24 0;
   @extend .flex-center;
   justify-content: space-between;
 
@@ -129,6 +134,7 @@ nav {
 
       .help {
         color: $sec-dark;
+        margin-bottom: $space-8;
       }
     }
   }

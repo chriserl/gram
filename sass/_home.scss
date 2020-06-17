@@ -4,14 +4,15 @@ section[class="main"] {
   margin-bottom: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-row-gap: $space-48;
+  grid-row-gap: $space-72;
   justify-content: center;
   align-items: center;
 
   @include mediaMd {
-    width: 95%;
+    width: 97.5%;
     margin: $space-40 0 0 auto;
     grid-template-columns: repeat(2, 50%);
+    grid-row-gap: 0;
   }
 
   .image-area {
@@ -41,22 +42,23 @@ section[class="main"] {
     }
 
     .main-text {
-      line-height: $space-28;
+      line-height: $space-56;
       letter-spacing: 0.35px;
-      margin-bottom: $space-24;
+      margin-bottom: $space-40;
     }
 
     .aux-text {
-      margin-bottom: $space-8;
+      margin-bottom: $space-12;
+      line-height: $space-32;
       color: $sec-dark;
     }
 
     .ctaz {
       @extend .flex-center;
-      margin-top: $space-24;
+      margin-top: $space-32;
 
       .upgrade-button {
-        margin-right: $space-16;
+        margin-right: $space-32;
       }
     }
   }
