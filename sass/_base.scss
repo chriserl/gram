@@ -9,27 +9,37 @@
 }
 
 @font-face {
-  src: url(../fonts/PoppinsLight.ttf) format(".ttf");
+  font-family: Billabong;
+  src: url("../../fonts/Billabong.ttf");
+}
+
+@font-face {
   font-family: PoppinsLight;
+  src: url("../../fonts/PoppinsLight.ttf");
 }
 
 @font-face {
-  src: url(../fonts/PoppinsRegular.ttf) format(".ttf");
   font-family: PoppinsRegular;
+  src: url("../../fonts/PoppinsRegular.ttf");
 }
 
 @font-face {
-  src: url(../fonts/PoppinsMedium.ttf) format(".ttf");
   font-family: PoppinsMedium;
+  src: url("../../fonts/PoppinsMedium.ttf");
 }
 
 @font-face {
-  src: url(../fonts/PoppinsSemiBold.ttf) format(".ttf");
   font-family: PoppinsBold;
+  src: url("../../fonts/PoppinsSemiBold.ttf");
 }
 
 body {
-  font-family: PoppinsLight, Helvetica, Arial, sans-serif;
+  font-family: PoppinsRegular, Arial, Helvetica, sans-serif;
+  width: 100vw;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* Space System */

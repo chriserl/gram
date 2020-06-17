@@ -1,0 +1,24 @@
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  border: none;
+  @extend .pl;
+  padding: $space-4 $space-8;
+  border-radius: $space-4;
+  @extend .light-shadow;
+
+  &:focus {
+    outline-color: $sec-color;
+  }
+}
+
+.light-shadow {
+  box-shadow: 0.45px 0.45px 1.5px $shadow-light;
+}
