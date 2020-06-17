@@ -1,0 +1,38 @@
+.feed {
+  width: 100%;
+
+  @include mediaMd {
+    display: grid;
+    grid-template-columns: 12.5rem calc(100vw - 12.5rem);
+    grid-column-gap: $space-40;
+  }
+
+  //Aside
+  aside {
+    display: block;
+    position: fixed;
+    height: 100vh;
+    overflow-y: hidden;
+    z-index: 1;
+    width: 75%;
+    background-color: whitesmoke;
+
+    @include mediaMd {
+      width: 14.5rem;
+    }
+
+    .profile-content {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  //Show aside
+  .profile-inactive {
+    display: none;
+
+    @include mediaMd {
+      display: block;
+    }
+  }
+}

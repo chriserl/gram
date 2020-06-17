@@ -53,6 +53,11 @@ section[class="main"] {
       color: $sec-dark;
     }
 
+    //Has to be changed
+    a {
+      color: white;
+    }
+
     .ctaz {
       @extend .flex-center;
       margin-top: $space-32;
