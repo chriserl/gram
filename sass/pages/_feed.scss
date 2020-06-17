@@ -1,8 +1,10 @@
 .feed {
-  width: 100%;
+  width: 100vw;
 
   main {
     padding: $space-20 $space-12;
+    height: 100vh;
+    overflow-y: scroll;
 
     nav {
       flex-flow: row wrap;
@@ -111,6 +113,32 @@
             color: white;
           }
         }
+      }
+    }
+
+    .feed {
+      display: block;
+      width: 85%;
+      height: max-content;
+      margin: 0 auto;
+      margin-top: $space-72;
+      scrollbar-width: none;
+      overflow: -moz-scrollbars-none;
+      -ms-overflow-style: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .feed-items {
+        width: 100%;
+        height: max-content;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+        grid-column-gap: $space-28;
+        grid-row-gap: $space-36;
+        justify-content: center;
+        margin-top: $space-40;
       }
     }
   }

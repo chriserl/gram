@@ -194,3 +194,56 @@ nav {
     }
   }
 }
+
+.feed-card {
+  width: 100%;
+  margin: $space-24 0;
+
+  .feed-image {
+    @extend .medium-shadow;
+    width: 100%;
+    height: 325px;
+    border-radius: $space-12;
+  }
+
+  .feed-controls {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: $space-16;
+    @extend .flex-center;
+    justify-content: space-between;
+
+    .post-user {
+      @extend .flex-center;
+
+      .user-image {
+        width: $space-32;
+        border-radius: 50%;
+        margin-right: $space-12;
+      }
+    }
+
+    .actions {
+      @extend .flex-center;
+
+      .like {
+        @extend .flex-center;
+        margin-right: $space-16;
+
+        .like-icon {
+          width: $space-20;
+          margin-right: $space-8;
+        }
+      }
+
+      .comment {
+        @extend .flex-center;
+
+        .comment-icon {
+          width: $space-20;
+          margin-right: $space-8;
+        }
+      }
+    }
+  }
+}
