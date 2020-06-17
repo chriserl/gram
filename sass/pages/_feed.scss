@@ -49,6 +49,70 @@
         }
       }
     }
+
+    .stories {
+      width: 85%;
+      margin: 0 auto;
+      margin-top: $space-40;
+
+      .stories-header {
+        @extend .flex-center;
+        justify-content: space-between;
+
+        .watch-all {
+          @extend .flex-center;
+
+          span {
+            box-shadow: none;
+            border: 1px solid $shadow-mid;
+            margin-right: $space-16;
+          }
+        }
+      }
+
+      .story-items {
+        margin-top: $space-36;
+        @extend .flex-center;
+        overflow-x: scroll;
+        scrollbar-width: none;
+        overflow: -moz-scrollbars-none;
+        -ms-overflow-style: none;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        .story-item {
+          list-style-type: none;
+          margin-right: $space-24;
+
+          .profile-image {
+            width: $space-96;
+            height: $space-96;
+          }
+        }
+
+        .add-story {
+          @extend .flex-center;
+          width: $space-96;
+          height: $space-96;
+          justify-content: center;
+          border-radius: 50%;
+          border: 1px solid $gray;
+
+          p {
+            padding: $space-16 $space-28;
+            border-radius: 50%;
+            background: linear-gradient(#5f69c4b0, #5f69c4af),
+              url(../../assets/images/profileimages/jade.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+          }
+        }
+      }
+    }
   }
 
   //Aside
@@ -57,7 +121,7 @@
     position: fixed;
     height: 100vh;
     overflow-y: scroll;
-    z-index: 1;
+    z-index: 999;
     width: 65%;
     background-color: whitesmoke;
     padding: $space-24 0 $space-24 $space-24;
