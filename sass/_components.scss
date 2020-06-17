@@ -27,7 +27,7 @@
 
 .ps {
   font-size: calc(0.125rem * 7);
-  font-family: PoppinsRegular;
+  font-family: PoppinsLight;
 }
 
 .psb {
@@ -49,6 +49,7 @@
 .btn-prim {
   @extend button;
   @extend .px;
+  @extend .light-shadow;
   color: white;
   background: $main-gradient;
 }
@@ -56,8 +57,34 @@
 .btn-sec {
   @extend button;
   @extend .pxb;
+  @extend .light-shadow;
   color: $primary-color;
   background: $light-gradient;
+}
+
+.btn-light {
+  @extend button;
+  @extend .px;
+  @extend .medium-shadow;
+  color: $sec-dark;
+  background: white;
+}
+
+.icon-btn {
+  @extend .flex-center;
+
+  span {
+    padding: 10px;
+    margin-right: $space-8;
+    border-radius: 50%;
+    background-color: white;
+    margin-bottom: $space-4;
+    @extend .large-shadow;
+    @extend .flex-center;
+  }
+  .btn-icon {
+    width: $space-4;
+  }
 }
 
 //Brand

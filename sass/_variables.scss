@@ -1,16 +1,12 @@
 //Gradients
-$main-gradient: linear-gradient(to bottom right, #c32d92, #dd336e, #f99d4c);
-$light-gradient: linear-gradient(
-  to bottom right,
-  #c32d9152,
-  #dd336f17,
-  #ffb4736b
-);
+$main-gradient: linear-gradient(to right, #c32d92, #dd336e, #f99d4c);
+$light-gradient: linear-gradient(to right, #c0489852, #ffc18a6b);
 
 //Solid colors
 $primary-color: #c32d92;
 $sec-color: #f99d4c;
 $prim-dark: #202129;
-$sec-dark: #292931;
+$sec-dark: #555566;
 $gray: #92949f;
+$shadow-mid: #c9c9c9;
 $shadow-light: #d4d4d4c0;
