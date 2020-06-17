@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: calc(12px + 0.35vw);
+}
+
+@font-face {
+  src: url(../fonts/PoppinsLight.ttf) format(".ttf");
+  font-family: PoppinsLight;
+}
+
+@font-face {
+  src: url(../fonts/PoppinsRegular.ttf) format(".ttf");
+  font-family: PoppinsRegular;
+}
+
+@font-face {
+  src: url(../fonts/PoppinsMedium.ttf) format(".ttf");
+  font-family: PoppinsMedium;
+}
+
+@font-face {
+  src: url(../fonts/PoppinsSemiBold.ttf) format(".ttf");
+  font-family: PoppinsBold;
+}
+
+body {
+  font-family: PoppinsLight, Helvetica, Arial, sans-serif;
+}
+
+/* Space System */
+//Base space is .4rem
+
+$space-4: calc(0.4rem * 1);
+$space-8: calc(0.4rem * 2);
+$space-12: calc(0.4rem * 3);
+$space-16: calc(0.4rem * 4);
+$space-20: calc(0.4rem * 5);
+$space-24: calc(0.4rem * 6);
+$space-28: calc(0.4rem * 7);
+$space-32: calc(0.4rem * 8);
+$space-36: calc(0.4rem * 9);
+$space-40: calc(0.4rem * 10);
+$space-44: calc(0.4rem * 11);
+$space-48: calc(0.4rem * 12);
+$space-56: calc(0.4rem * 14);
+$space-64: calc(0.4rem * 16);
+$space-72: calc(0.4rem * 18);
+$space-80: calc(0.4rem * 20);
+$space-88: calc(0.4rem * 22);
+$space-96: calc(0.4rem * 24);
+$space-104: calc(0.4rem * 26);

@@ -1,0 +1,42 @@
+//Typography
+
+.h1 {
+  font-size: 1rem;
+}
+
+.h2 {
+  font-size: 1rem;
+}
+
+.pl {
+  font-size: 1rem;
+}
+
+.pr {
+  font-size: 1rem;
+}
+
+.prb {
+  font-size: 1rem;
+}
+
+.ps {
+  font-size: 1rem;
+}
+
+.psb {
+  font-size: 1rem;
+}
+
+.brand {
+  width: max-content;
+  padding: 0.25rem 0.75rem;
+
+  .brand-icon {
+    width: 1rem;
+  }
+
+  .brand-name {
+    font-size: 1rem;
+  }
+}
