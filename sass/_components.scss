@@ -50,7 +50,7 @@
   @extend .button;
   @extend .pxb;
   @extend .light-shadow;
-  padding: $space-12 $space-24;
+  padding: $space-10 $space-24;
   color: white;
   background: $main-gradient;
 }
@@ -113,6 +113,36 @@
     border-radius: 50%;
     border: $space-8 solid white;
     z-index: 1;
+  }
+}
+
+//Forms
+.form-control {
+  @extend .flex-center;
+  padding: $space-8 $space-16;
+  background-color: $input-white;
+  border-radius: $space-8;
+  margin: auto;
+
+  img {
+    margin-right: $space-12;
+  }
+
+  input {
+    @extend .ps;
+    width: 100%;
+    background: transparent;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  input::placeholder,
+  -ms-input-placeholder {
+    @extend .psb;
+    color: $gray;
   }
 }
 

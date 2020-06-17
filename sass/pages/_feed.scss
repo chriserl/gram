@@ -1,10 +1,54 @@
 .feed {
   width: 100%;
 
-  @include mediaMd {
-    display: grid;
-    grid-template-columns: 12.5rem calc(100vw - 12.5rem);
-    grid-column-gap: $space-40;
+  main {
+    padding: $space-20 $space-12;
+
+    nav {
+      flex-flow: row wrap;
+
+      @include mediaMd {
+        width: 90%;
+      }
+
+      .hamBtn {
+        @extend .button;
+
+        @include mediaMd {
+          display: none;
+        }
+      }
+
+      form {
+        flex-basis: 90%;
+        order: 2;
+        margin: 0 auto;
+        margin-top: $space-36;
+
+        @include mediaMd {
+          order: 0;
+          flex-basis: 25%;
+          margin: 0;
+        }
+      }
+
+      .nav-items {
+        @extend .flex-center;
+
+        .nav-item {
+          list-style-type: none;
+          margin: 0 $space-10;
+
+          span {
+            @extend .notify;
+          }
+        }
+
+        button {
+          margin-left: $space-20;
+        }
+      }
+    }
   }
 
   //Aside
@@ -130,6 +174,18 @@
 
     @include mediaMd {
       display: block;
+    }
+  }
+
+  @include mediaMd {
+    width: 100vw;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: 12.5rem calc(100vw - 12.5rem);
+    grid-column-gap: $space-40;
+
+    aside {
+      position: static;
     }
   }
 }
