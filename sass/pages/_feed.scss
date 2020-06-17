@@ -12,18 +12,115 @@
     display: block;
     position: fixed;
     height: 100vh;
-    overflow-y: hidden;
+    overflow-y: scroll;
     z-index: 1;
-    width: 75%;
+    width: 65%;
     background-color: whitesmoke;
+    padding: $space-24 0 $space-24 $space-24;
+    scrollbar-width: none;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     @include mediaMd {
       width: 14.5rem;
     }
 
+    .aside-header {
+      width: 90%;
+      margin: 0 auto 0 0;
+      @extend .flex-center;
+      justify-content: space-between;
+      margin-bottom: $space-40;
+
+      @include mediaMd {
+        .close-ham {
+          display: none;
+        }
+      }
+    }
+
     .profile-content {
+      width: 100%;
       display: grid;
       grid-template-columns: 1fr;
+      justify-content: center;
+    }
+
+    .profile-summary {
+      width: max-content;
+      margin: 0 auto 0 22.5%;
+      text-align: center;
+
+      .image {
+        margin-bottom: $space-32;
+      }
+
+      .profile-name {
+        margin-bottom: $space-12;
+        color: $prim-dark;
+      }
+      .profile-link {
+        color: $sec-dark;
+      }
+    }
+
+    .profile-stats {
+      width: max-content;
+      margin: $space-32 auto $space-32 0;
+      @extend .flex-center;
+      text-align: center;
+
+      .stat {
+        padding: 0 $space-10;
+
+        p:first-of-type {
+          margin-bottom: $space-8;
+        }
+
+        .stat-name {
+          color: $sec-dark;
+        }
+
+        &:nth-child(2),
+        &:nth-child(1) {
+          border-right: 1px solid $shadow-mid;
+        }
+      }
+    }
+    .side-menu {
+      width: 90%;
+      margin: 0 0 0 auto;
+
+      .menu-item {
+        list-style-type: none;
+        margin: $space-24 0;
+        padding: $space-6;
+
+        .menu-link {
+          color: black;
+          @extend .flex-center;
+
+          .link-icon {
+            margin-right: $space-24;
+          }
+        }
+      }
+
+      .item-active {
+        border-right: 2px solid $primary-color;
+
+        .menu-link {
+          color: $primary-color;
+        }
+      }
+
+      .logout {
+        margin-top: $space-72;
+      }
     }
   }
 

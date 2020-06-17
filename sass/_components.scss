@@ -22,7 +22,7 @@
 
 .prb {
   font-size: calc(0.125rem * 8);
-  font-family: PoppinsBold;
+  font-family: PoppinsMedium;
 }
 
 .ps {
@@ -88,6 +88,31 @@
   }
   .btn-icon {
     width: $space-8;
+  }
+}
+
+.link-icon {
+  width: $space-20;
+}
+
+//Profile
+.story-unseen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $main-gradient;
+  height: max-content;
+  width: max-content;
+  border-radius: 50%;
+  padding: 1.75px;
+  z-index: -1;
+
+  .profile-image {
+    width: $space-120;
+    height: $space-120;
+    border-radius: 50%;
+    border: $space-8 solid white;
+    z-index: 1;
   }
 }
 
