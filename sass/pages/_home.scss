@@ -56,12 +56,7 @@ section[class="main"] {
     .aux-text {
       margin-bottom: $space-12;
       line-height: $space-32;
-      color: $sec-dark;
-    }
-
-    //Has to be changed
-    a {
-      color: white;
+      color: $gray-text;
     }
 
     .ctaz {

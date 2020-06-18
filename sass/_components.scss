@@ -10,50 +10,53 @@
   font-family: PoppinsMedium;
 }
 
-.pl {
-  font-size: calc(0.125rem * 10);
-  font-family: PoppinsLight;
-}
-
-.plb {
-  font-size: calc(0.125rem * 10);
+.h3 {
+  font-size: calc(0.125rem * 9.5);
   font-family: PoppinsMedium;
 }
 
-.pr {
-  font-size: calc(0.125rem * 8);
-  font-family: PoppinsLight;
+.h4 {
+  font-size: calc(0.125rem * 7.5);
+  font-family: PoppinsRegular;
 }
 
-.prb {
-  font-size: calc(0.125rem * 8);
+.pl {
+  font-size: calc(0.125rem * 6.5);
+  font-family: PoppinsRegular;
+}
+
+.plb {
+  @extend .pl;
   font-family: PoppinsMedium;
 }
 
 .ps {
-  font-size: calc(0.125rem * 7);
+  font-size: calc(0.125rem * 5.95);
   font-family: PoppinsLight;
 }
 
 .psb {
-  font-size: calc(0.125rem * 7);
+  font-size: calc(0.125rem * 5.95);
   font-family: PoppinsMedium;
 }
 
-.px {
-  font-size: calc(0.125rem * 6);
-  font-family: PoppinsRegular;
+//Icons
+.post-icon {
+  width: 0.85rem;
 }
 
-.pxb {
-  font-size: calc(0.125rem * 6);
-  font-family: PoppinsMedium;
+.standard-icon {
+  width: 1rem;
+}
+
+.button-icon {
+  width: 0.45rem;
 }
 
 //Buttons
 .btn-prim {
   @extend .button;
-  @extend .pxb;
+  @extend .psb;
   @extend .light-shadow;
   padding: $space-10 $space-24;
   color: white;
@@ -62,19 +65,19 @@
 
 .btn-sec {
   @extend .button;
-  @extend .pxb;
+  @extend .psb;
   @extend .light-shadow;
   padding: $space-8 $space-20;
-  color: $sec-color;
+  color: $secondary-color;
   background: $light-gradient;
 }
 
 .btn-light {
   @extend .button;
-  @extend .px;
-  @extend .medium-shadow;
+  @extend .ps;
+  @extend .light-shadow;
   padding: $space-12 $space-24;
-  color: $sec-dark;
+  color: $prim-dark;
   background: white;
 }
 
@@ -90,14 +93,11 @@
     margin-bottom: $space-4;
     @extend .large-shadow;
     @extend .flex-center;
+    border: 1px solid $shadow-gray;
   }
   .btn-icon {
-    width: $space-8;
+    @extend .button-icon;
   }
-}
-
-.link-icon {
-  width: $space-20;
 }
 
 //Profile
@@ -116,20 +116,32 @@
     width: $space-120;
     height: $space-120;
     border-radius: 50%;
-    border: $space-8 solid white;
+    border: $space-8 solid whitesmoke;
     z-index: 1;
+  }
+}
+
+//Story circle
+.story-item {
+  list-style-type: none;
+
+  .profile-image {
+    @extend .light-shadow;
+    width: $space-96;
+    height: $space-96;
   }
 }
 
 //Forms
 .form-control {
   @extend .flex-center;
-  padding: $space-8 $space-16;
-  background-color: $input-white;
+  padding: $space-12 $space-24;
+  background-color: $gray-bg;
   border-radius: $space-8;
   margin: auto;
 
   img {
+    @extend .standard-icon;
     margin-right: $space-12;
   }
 
@@ -147,7 +159,7 @@
   input::placeholder,
   -ms-input-placeholder {
     @extend .psb;
-    color: $gray;
+    color: $gray-text;
   }
 }
 
@@ -165,10 +177,11 @@
   }
 
   .brand-name {
+    @extend .h2;
     font-family: Billabong;
     @extend .flex-center;
     margin-top: $space-4;
-    color: $sec-dark;
+    color: $prim-dark;
   }
 }
 
@@ -184,6 +197,10 @@ nav {
     width: 80%;
   }
 
+  .nav-icon {
+    @extend .standard-icon;
+  }
+
   .nav-links {
     margin-top: $space-4;
     @extend .flex-center;
@@ -194,7 +211,7 @@ nav {
       list-style-type: none;
 
       .help {
-        color: $sec-dark;
+        color: $prim-dark;
         margin-bottom: $space-8;
       }
     }
@@ -208,7 +225,7 @@ nav {
   margin: $space-40 0;
 
   .feed-image {
-    @extend .medium-shadow;
+    @extend .light-shadow;
     width: 100%;
     height: minmax(325px, 485px);
     border-radius: $space-12;
@@ -223,17 +240,7 @@ nav {
 
     .post-user {
       @extend .flex-center;
-      color: $sec-dark;
-
-      p {
-        color: $sec-dark;
-      }
-
-      .user-image {
-        width: $space-24;
-        border-radius: 50%;
-        margin-right: $space-10;
-      }
+      color: $gray-text;
     }
 
     .actions {
@@ -245,7 +252,8 @@ nav {
         margin-right: $space-16;
 
         .like-icon {
-          width: $space-18;
+          @extend .post-icon;
+          //width: $space-18;
           margin-right: $space-8;
         }
       }
@@ -254,7 +262,7 @@ nav {
         @extend .flex-center;
 
         .comment-icon {
-          width: $space-18;
+          @extend .post-icon;
           margin-right: $space-8;
         }
       }

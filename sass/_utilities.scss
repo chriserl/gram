@@ -8,31 +8,28 @@
 }
 
 .light-shadow {
-  box-shadow: 0.45px 0.45px 1.5px #fae1e9;
-}
-
-.medium-shadow {
-  box-shadow: $space-4 $space-4 $space-24 #fae1e9;
+  box-shadow: 1.2px 1px 18px $shadow-gray;
 }
 
 .large-shadow {
-  box-shadow: 0 $space-20 $space-32 #d4d4d4c0;
+  box-shadow: 0 $space-20 $space-32 $shadow-gray;
 }
 
 .button {
-  @extend .px;
+  @extend .ps;
   border: none;
   border-radius: $space-6;
   background: transparent;
 
   &:focus {
-    outline-color: $sec-color;
+    outline-color: $secondary-color;
   }
 }
 
 //icon notify
 .notify {
   position: relative;
-  bottom: $space-12;
-  color: $sec-color;
+  bottom: 11px;
+  right: 4px;
+  color: $accent-color;
 }
