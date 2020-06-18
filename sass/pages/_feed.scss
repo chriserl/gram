@@ -52,6 +52,8 @@
       }
     }
 
+    //Stories Styles
+
     .stories {
       width: 85%;
       margin: 0 auto;
@@ -61,8 +63,13 @@
         @extend .flex-center;
         justify-content: space-between;
 
+        .section-title {
+          color: $prim-dark;
+        }
+
         .watch-all {
           @extend .flex-center;
+          color: $prim-dark;
 
           span {
             box-shadow: none;
@@ -116,18 +123,23 @@
       }
     }
 
+    //Feed Styles
     .feed {
       display: block;
       width: 85%;
       height: max-content;
       margin: 0 auto;
-      margin-top: $space-72;
+      margin-top: $space-112;
       scrollbar-width: none;
       overflow: -moz-scrollbars-none;
       -ms-overflow-style: none;
 
       &::-webkit-scrollbar {
         display: none;
+      }
+
+      .section-title {
+        color: $prim-dark;
       }
 
       .feed-items {
@@ -137,8 +149,8 @@
         grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
         grid-column-gap: $space-28;
         grid-row-gap: $space-36;
-        justify-content: center;
-        margin-top: $space-40;
+        justify-content: left;
+        margin-top: $space-32;
       }
     }
   }
@@ -237,7 +249,7 @@
         padding: $space-6;
 
         .menu-link {
-          color: black;
+          color: $prim-dark;
           @extend .flex-center;
 
           .link-icon {

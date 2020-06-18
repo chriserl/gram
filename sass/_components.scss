@@ -15,6 +15,11 @@
   font-family: PoppinsLight;
 }
 
+.plb {
+  font-size: calc(0.125rem * 10);
+  font-family: PoppinsMedium;
+}
+
 .pr {
   font-size: calc(0.125rem * 8);
   font-family: PoppinsLight;
@@ -167,6 +172,8 @@
   }
 }
 
+//Navigation
+
 nav {
   width: 92.5%;
   margin: 0 auto;
@@ -195,6 +202,8 @@ nav {
   }
 }
 
+//Feed card
+
 .feed-card {
   width: 100%;
   margin: $space-24 0;
@@ -215,6 +224,7 @@ nav {
 
     .post-user {
       @extend .flex-center;
+      color: $sec-dark;
 
       .user-image {
         width: $space-32;
@@ -225,6 +235,7 @@ nav {
 
     .actions {
       @extend .flex-center;
+      color: $prim-dark;
 
       .like {
         @extend .flex-center;
