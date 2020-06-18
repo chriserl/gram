@@ -11,7 +11,7 @@
       width: 92.5%;
 
       @include mediaMd {
-        width: 94.5%;
+        width: 90%;
       }
 
       .hamBtn {
@@ -130,7 +130,7 @@
       width: 90%;
       height: max-content;
       margin: 0 auto;
-      margin-top: $space-112;
+      margin-top: $space-80;
       scrollbar-width: none;
       overflow: -moz-scrollbars-none;
       -ms-overflow-style: none;

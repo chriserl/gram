@@ -210,7 +210,7 @@ nav {
   .feed-image {
     @extend .medium-shadow;
     width: 100%;
-    height: minmax(325px, 400px);
+    height: minmax(325px, 485px);
     border-radius: $space-12;
   }
 
@@ -220,11 +220,6 @@ nav {
     margin-top: $space-16;
     @extend .flex-center;
     justify-content: space-between;
-
-    p {
-      margin-top: $space-4;
-      color: $prim-dark;
-    }
 
     .post-user {
       @extend .flex-center;
