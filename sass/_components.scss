@@ -57,7 +57,7 @@
 .btn-prim {
   @extend .button;
   @extend .psb;
-  @extend .light-shadow;
+  @include light-shadow;
   padding: $space-10 $space-24;
   color: $prim-light;
   background: $main-gradient;
@@ -70,7 +70,7 @@
 .btn-sec {
   @extend .button;
   @extend .psb;
-  @extend .light-shadow;
+  @include light-shadow;
   padding: $space-8 $space-20;
   color: $secondary-color;
   background: $light-gradient;
@@ -79,7 +79,7 @@
 .btn-light {
   @extend .button;
   @extend .ps;
-  @extend .light-shadow;
+  @include light-shadow;
   padding: $space-12 $space-24;
   color: $prim-dark;
   background: white;
@@ -87,7 +87,7 @@
 
 .icon-btn {
   @extend .button;
-  @extend .flex-center;
+  @include flex-center;
 
   span {
     padding: 10px;
@@ -95,8 +95,8 @@
     border-radius: 50%;
     background-color: white;
     margin-bottom: $space-4;
-    @extend .large-shadow;
-    @extend .flex-center;
+    @include large-shadow;
+    @include flex-center;
     border: 1px solid $shadow-gray;
   }
   .btn-icon {
@@ -130,7 +130,7 @@
   list-style-type: none;
 
   .profile-image {
-    @extend .light-shadow;
+    @include light-shadow;
     width: $space-96;
     height: $space-96;
   }
@@ -138,7 +138,7 @@
 
 //Forms
 .form-control {
-  @extend .flex-center;
+  @include flex-center;
   padding: $space-12 $space-24;
   background-color: $gray-bg;
   border-radius: $space-8;
@@ -172,7 +172,7 @@
 .brand {
   width: max-content;
   padding: 0.25rem 0.75rem;
-  @extend .flex-center;
+  @include flex-center;
 
   .brand-icon {
     width: $space-32;
@@ -183,7 +183,7 @@
   .brand-name {
     @extend .h2;
     font-family: Billabong;
-    @extend .flex-center;
+    @include flex-center;
     margin-top: $space-4;
     color: $prim-dark;
   }
@@ -194,7 +194,7 @@
 nav {
   margin: 0 auto;
   padding: $space-24 0;
-  @extend .flex-center;
+  @include flex-center;
   justify-content: space-between;
 
   @include mediaMd {
@@ -207,7 +207,7 @@ nav {
 
   .nav-links {
     margin-top: $space-4;
-    @extend .flex-center;
+    @include flex-center;
 
     .nav-item {
       padding: $space-4;
@@ -229,7 +229,7 @@ nav {
   margin: $space-40 0;
 
   .feed-image {
-    @extend .light-shadow;
+    @include light-shadow;
     width: 100%;
     height: minmax(325px, 485px);
     border-radius: $space-12;
@@ -239,20 +239,20 @@ nav {
     width: 95%;
     margin: 0 auto;
     margin-top: $space-16;
-    @extend .flex-center;
+    @include flex-center;
     justify-content: space-between;
 
     .post-user {
-      @extend .flex-center;
+      @include flex-center;
       color: $gray-text;
     }
 
     .actions {
-      @extend .flex-center;
+      @include flex-center;
       color: $prim-dark;
 
       .like {
-        @extend .flex-center;
+        @include flex-center;
         margin-right: $space-16;
 
         .like-icon {
@@ -263,7 +263,7 @@ nav {
       }
 
       .comment {
-        @extend .flex-center;
+        @include flex-center;
 
         .comment-icon {
           @extend .post-icon;

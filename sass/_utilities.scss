@@ -1,20 +1,4 @@
-.flex {
-  display: flex;
-}
-
-.flex-center {
-  display: flex;
-  align-items: center;
-}
-
-.light-shadow {
-  box-shadow: 1.2px 1px 18px $shadow-gray;
-}
-
-.large-shadow {
-  box-shadow: 0 $space-20 $space-32 $shadow-gray;
-}
-
+//Base button
 .button {
   @extend .ps;
   border: none;

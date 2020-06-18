@@ -37,7 +37,7 @@
       }
 
       .nav-items {
-        @extend .flex-center;
+        @include flex-center;
 
         .nav-item {
           list-style-type: none;
@@ -62,7 +62,7 @@
       margin-top: $space-40;
 
       .stories-header {
-        @extend .flex-center;
+        @include flex-center;
         justify-content: space-between;
 
         .section-title {
@@ -70,7 +70,7 @@
         }
 
         .watch-all {
-          @extend .flex-center;
+          @include flex-center;
           color: $prim-dark;
 
           span {
@@ -83,7 +83,7 @@
 
       .story-items {
         margin-top: $space-36;
-        @extend .flex-center;
+        @include flex-center;
         overflow-x: scroll;
         scrollbar-width: none;
         overflow: -moz-scrollbars-none;
@@ -99,7 +99,7 @@
 
         //Add story
         .add-story {
-          @extend .flex-center;
+          @include flex-center;
           width: $space-96;
           height: $space-96;
           justify-content: center;
@@ -177,7 +177,7 @@
     .aside-header {
       width: 90%;
       margin: 0 auto 0 0;
-      @extend .flex-center;
+      @include flex-center;
       justify-content: space-between;
       margin-bottom: $space-40;
 
@@ -218,7 +218,7 @@
     .profile-stats {
       width: max-content;
       margin: $space-32 auto $space-32 0;
-      @extend .flex-center;
+      @include flex-center;
       text-align: center;
 
       .stat {
@@ -252,7 +252,7 @@
 
         .menu-link {
           color: $prim-dark;
-          @extend .flex-center;
+          @include flex-center;
 
           .link-icon {
             @extend .standard-icon;

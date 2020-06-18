@@ -22,12 +22,12 @@ section[class="main"] {
   }
 
   .image-area {
-    @extend .flex;
+    @include flex;
     justify-content: center;
 
     .hd-image {
       width: 90%;
-      @extend .large-shadow;
+      @include large-shadow;
     }
 
     @include mediaMd {
@@ -60,7 +60,7 @@ section[class="main"] {
     }
 
     .ctaz {
-      @extend .flex-center;
+      @include flex-center;
       margin-top: $space-32;
 
       .upgrade-button {
