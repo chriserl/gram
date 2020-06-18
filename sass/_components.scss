@@ -175,7 +175,6 @@
 //Navigation
 
 nav {
-  width: 92.5%;
   margin: 0 auto;
   padding: $space-24 0;
   @extend .flex-center;
@@ -206,30 +205,39 @@ nav {
 
 .feed-card {
   width: 100%;
-  margin: $space-24 0;
+  margin: $space-40 0;
 
   .feed-image {
     @extend .medium-shadow;
     width: 100%;
-    height: 325px;
+    height: minmax(325px, 400px);
     border-radius: $space-12;
   }
 
   .feed-controls {
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     margin-top: $space-16;
     @extend .flex-center;
     justify-content: space-between;
 
+    p {
+      margin-top: $space-4;
+      color: $prim-dark;
+    }
+
     .post-user {
       @extend .flex-center;
       color: $sec-dark;
 
+      p {
+        color: $sec-dark;
+      }
+
       .user-image {
-        width: $space-32;
+        width: $space-24;
         border-radius: 50%;
-        margin-right: $space-12;
+        margin-right: $space-10;
       }
     }
 
@@ -242,7 +250,7 @@ nav {
         margin-right: $space-16;
 
         .like-icon {
-          width: $space-20;
+          width: $space-18;
           margin-right: $space-8;
         }
       }
@@ -251,7 +259,7 @@ nav {
         @extend .flex-center;
 
         .comment-icon {
-          width: $space-20;
+          width: $space-18;
           margin-right: $space-8;
         }
       }
