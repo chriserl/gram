@@ -59,8 +59,12 @@
   @extend .psb;
   @extend .light-shadow;
   padding: $space-10 $space-24;
-  color: white;
+  color: $prim-light;
   background: $main-gradient;
+
+  a {
+    color: $prim-light;
+  }
 }
 
 .btn-sec {
