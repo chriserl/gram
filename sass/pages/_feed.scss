@@ -75,6 +75,7 @@
 
         .watch-all {
           @include flex-center;
+          margin-right: $space-18;
           color: $prim-dark;
 
           span {
