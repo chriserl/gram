@@ -1,48 +1,35 @@
 //Typography
 
 .h1 {
-  font-size: calc(0.125rem * 18);
-  font-family: PoppinsLight;
+  @include h1;
 }
 
 .h2 {
-  font-size: calc(0.125rem * 12);
-  font-family: PoppinsMedium;
+  @include h2;
 }
 
 .h3 {
-  font-size: calc(0.125rem * 9.5);
-  font-family: PoppinsMedium;
+  @include h3;
 }
 
 .h4 {
-  font-size: calc(0.125rem * 7.5);
-  font-family: PoppinsRegular;
+  @include h4;
 }
 
 .pl {
-  font-size: calc(0.125rem * 6.5);
-  font-family: PoppinsRegular;
+  @include pl;
 }
 
 .plb {
-  font-size: calc(0.125rem * 6.5);
-  font-family: PoppinsMedium;
+  @include plb;
 }
 
 .ps {
-  font-size: calc(0.125rem * 5.95);
-  font-family: PoppinsLight;
+  @include ps;
 }
 
 .psb {
-  font-size: calc(0.125rem * 5.95);
-  font-family: PoppinsMedium;
-}
-
-@mixin psb {
-  @extend .ps;
-  font-family: PoppinsMedium;
+  @include psb;
 }
 
 //Icons
@@ -60,13 +47,12 @@
 
 //Buttons
 .btn-prim {
-  @extend .psb;
+  @include psb;
   @extend .button;
   @include light-shadow;
   padding: $space-10 $space-24;
   color: $prim-light;
   background: $main-gradient;
-  @include psb;
 
   a {
     color: $prim-light;
@@ -74,8 +60,8 @@
 }
 
 .btn-sec {
-  @extend .button;
   @include psb;
+  @extend .button;
   @include light-shadow;
   padding: $space-8 $space-20;
   color: $secondary-color;
@@ -83,8 +69,8 @@
 }
 
 .btn-light {
+  @include ps;
   @extend .button;
-  @extend .ps;
   @include light-shadow;
   padding: $space-12 $space-24;
   color: $prim-dark;
@@ -92,7 +78,7 @@
 }
 
 .icon-btn {
-  @extend .ps;
+  @include ps;
   @extend .button;
   @include flex-center;
 
@@ -161,7 +147,7 @@
   }
 
   input {
-    @extend .ps;
+    @include ps;
     width: 100%;
     background: transparent;
     border: none;
@@ -172,28 +158,28 @@
   }
 
   input::-webkit-input-placeholder {
-    @extend .psb;
+    @include psb;
     color: $gray-text;
   }
 
   input::-moz-placeholder {
-    @extend .psb;
+    @include psb;
     color: $gray-text;
   }
 
   input:-ms-input-placeholder {
-    @extend .psb;
+    @include psb;
     color: $gray-text;
   }
 
   input::-ms-input-placeholder {
-    @extend .psb;
+    @include psb;
     color: $gray-text;
   }
 
   input::placeholder,
   -ms-input-placeholder {
-    @extend .psb;
+    @include psb;
     color: $gray-text;
   }
 }
