@@ -44,6 +44,8 @@ section[class="main"] {
     margin: 0 auto;
 
     @include mediaMd {
+      width: -webkit-max-content;
+      width: -moz-max-content;
       width: max-content;
     }
 

@@ -110,7 +110,11 @@
   justify-content: center;
   align-items: center;
   background: $main-gradient;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   border-radius: 50%;
   padding: 1.75px;
@@ -160,6 +164,26 @@
     }
   }
 
+  input::-webkit-input-placeholder {
+    @extend .psb;
+    color: $gray-text;
+  }
+
+  input::-moz-placeholder {
+    @extend .psb;
+    color: $gray-text;
+  }
+
+  input:-ms-input-placeholder {
+    @extend .psb;
+    color: $gray-text;
+  }
+
+  input::-ms-input-placeholder {
+    @extend .psb;
+    color: $gray-text;
+  }
+
   input::placeholder,
   -ms-input-placeholder {
     @extend .psb;
@@ -170,6 +194,8 @@
 //Brand
 
 .brand {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   padding: 0.25rem 0.75rem;
   @include flex-center;
