@@ -290,4 +290,16 @@ nav {
       }
     }
   }
+
+  .feed-info {
+    margin: $space-16 $space-8 $space-12 $space-4;
+
+    p {
+      display: inline;
+    }
+
+    .user-link {
+      margin-right: $space-8;
+    }
+  }
 }
