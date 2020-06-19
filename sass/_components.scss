@@ -54,6 +54,10 @@
   color: $prim-light;
   background: $main-gradient;
 
+  &:hover {
+    background: $secondary-color;
+  }
+
   a {
     color: $prim-light;
   }
@@ -62,10 +66,15 @@
 .btn-sec {
   @include psb;
   @include button;
-  @include light-shadow;
+  @include mid-shadow;
   padding: $space-8 $space-20;
   color: $secondary-color;
   background: $light-gradient;
+
+  &:hover {
+    background: $secondary-color;
+    color: $prim-light;
+  }
 }
 
 .btn-light {
@@ -75,6 +84,10 @@
   padding: $space-12 $space-24;
   color: $prim-dark;
   background: white;
+
+  &:hover {
+    color: $gray-text;
+  }
 }
 
 .icon-btn {
@@ -94,6 +107,10 @@
   }
   .btn-icon {
     @extend .button-icon;
+  }
+
+  &:hover {
+    color: $primary-color;
   }
 }
 
