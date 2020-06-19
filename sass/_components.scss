@@ -26,7 +26,7 @@
 }
 
 .plb {
-  @extend .pl;
+  font-size: calc(0.125rem * 6.5);
   font-family: PoppinsMedium;
 }
 
@@ -37,6 +37,11 @@
 
 .psb {
   font-size: calc(0.125rem * 5.95);
+  font-family: PoppinsMedium;
+}
+
+@mixin psb {
+  @extend .ps;
   font-family: PoppinsMedium;
 }
 
@@ -55,12 +60,13 @@
 
 //Buttons
 .btn-prim {
-  @extend .button;
   @extend .psb;
+  @extend .button;
   @include light-shadow;
   padding: $space-10 $space-24;
   color: $prim-light;
   background: $main-gradient;
+  @include psb;
 
   a {
     color: $prim-light;
@@ -69,7 +75,7 @@
 
 .btn-sec {
   @extend .button;
-  @extend .psb;
+  @include psb;
   @include light-shadow;
   padding: $space-8 $space-20;
   color: $secondary-color;
@@ -86,6 +92,7 @@
 }
 
 .icon-btn {
+  @extend .ps;
   @extend .button;
   @include flex-center;
 
