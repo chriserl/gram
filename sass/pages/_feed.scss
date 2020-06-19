@@ -16,7 +16,7 @@
       }
 
       .hamBtn {
-        @extend .button;
+        @include button;
 
         @include mediaMd {
           display: none;
@@ -44,7 +44,7 @@
           margin: 0 $space-8;
 
           span {
-            @extend .notify;
+            @include notify;
           }
         }
 

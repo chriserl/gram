@@ -48,7 +48,7 @@
 //Buttons
 .btn-prim {
   @include psb;
-  @extend .button;
+  @include button;
   @include light-shadow;
   padding: $space-10 $space-24;
   color: $prim-light;
@@ -61,7 +61,7 @@
 
 .btn-sec {
   @include psb;
-  @extend .button;
+  @include button;
   @include light-shadow;
   padding: $space-8 $space-20;
   color: $secondary-color;
@@ -70,7 +70,7 @@
 
 .btn-light {
   @include ps;
-  @extend .button;
+  @include button;
   @include light-shadow;
   padding: $space-12 $space-24;
   color: $prim-dark;
@@ -79,7 +79,7 @@
 
 .icon-btn {
   @include ps;
-  @extend .button;
+  @include button;
   @include flex-center;
 
   span {

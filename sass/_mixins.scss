@@ -48,6 +48,17 @@
   }
 }
 
+//Base button
+@mixin button {
+  border: none;
+  border-radius: $space-6;
+  background: transparent;
+
+  &:focus {
+    outline-color: $secondary-color;
+  }
+}
+
 //Layouts
 @mixin flex {
   display: flex;
@@ -65,4 +76,12 @@
 
 @mixin large-shadow {
   box-shadow: 0 $space-20 $space-32 $shadow-gray;
+}
+
+//icon notify
+@mixin notify {
+  position: relative;
+  bottom: 11px;
+  right: 4px;
+  color: $accent-color;
 }
