@@ -320,3 +320,34 @@ nav {
     }
   }
 }
+
+//Explore Card
+
+.explore-card {
+  color: white;
+
+  .card-image {
+    width: 100%;
+    border-radius: $space-16;
+  }
+
+  .explore-info {
+    margin-top: -5rem;
+    margin-left: $space-24;
+
+    .card-user {
+      @include flex-center;
+      margin-top: $space-16;
+
+      .card-user-image {
+        width: $space-40;
+        height: $space-40;
+        border-radius: 50%;
+      }
+
+      .user-name {
+        margin-left: $space-12;
+      }
+    }
+  }
+}

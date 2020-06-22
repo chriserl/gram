@@ -1,0 +1,54 @@
+.explore {
+  width: 100%;
+
+  .explore-nav-wrapper {
+    width: 85%;
+    overflow-x: scroll;
+    margin: $space-48 auto;
+    @include flex-center;
+    @include scrollHide;
+
+    @include mediaMd {
+      justify-content: center;
+    }
+
+    .explore-tags {
+      width: max-content;
+      @include flex-center;
+      border-bottom: 1px solid $gray-text;
+
+      a {
+        color: $prim-dark;
+      }
+
+      .explore-tag {
+        width: max-content;
+        list-style-type: none;
+        padding-bottom: $space-20;
+        margin: 0 $space-28;
+      }
+
+      .explore-tag:first-of-type {
+        margin-left: 0;
+      }
+
+      .explore-tag:last-of-type {
+        margin-right: 0;
+      }
+
+      .active-tag {
+        padding-bottom: $space-16;
+        border-bottom: $space-4 solid $prim-dark;
+      }
+    }
+  }
+
+  .tab-content {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-column-gap: $space-32;
+    grid-row-gap: $space-56;
+  }
+}
