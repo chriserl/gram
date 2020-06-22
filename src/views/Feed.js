@@ -1,4 +1,5 @@
 import React from "react";
+import GlobalContext from "../contexts/GlobalContext";
 import Nav from "../components/Nav";
 import Stories from "../components/Stories";
 import FeedCard from "../components/FeedCard";
@@ -71,17 +72,23 @@ export default class FeedView extends React.Component {
   render() {
     return (
       <div className="feed-view">
-        <Nav />
-        <Stories />
-        <section className="feed">
-          <p className="section-title h3">Feed</p>
+        <GlobalContext.Consumer>
+          {(globalStore) => (
+            <React.Fragment>
+              <Nav toggleSidenav={globalStore.toggleSidenav} />
+              <Stories />
+              <section className="feed">
+                <p className="section-title h3">Feed</p>
 
-          <div className="feed-items">
-            {this.state.feedItems.map((feedItem) => (
-              <FeedCard postInfo={feedItem} key={feedItem.userLink} />
-            ))}
-          </div>
-        </section>
+                <div className="feed-items">
+                  {this.state.feedItems.map((feedItem) => (
+                    <FeedCard postInfo={feedItem} key={feedItem.userLink} />
+                  ))}
+                </div>
+              </section>
+            </React.Fragment>
+          )}
+        </GlobalContext.Consumer>
       </div>
     );
   }

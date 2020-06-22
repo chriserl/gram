@@ -4,11 +4,11 @@ import searchIcon from "../assets/images/icons/menuicons/loupe.svg";
 import notificationIcon from "../assets/images/icons/menuicons/bell.svg";
 import messagesIcon from "../assets/images/icons/menuicons/envelope.svg";
 
-export default function Nav() {
+export default function Nav(props) {
   return (
     <React.Fragment>
       <nav>
-        <button className="hamBtn">
+        <button className="hamBtn" onClick={props.toggleSidenav}>
           <img
             src={hamburgerIcon}
             alt="side navigation icon"
