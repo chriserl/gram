@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Brand from "./Brand";
 import profileImage from "../assets/images/profileimages/jade.jpg";
 import closeIcon from "../assets/images/icons/menuicons/cancel.svg";
@@ -12,7 +13,7 @@ import settingsIcon from "../assets/images/icons/menuicons/settings.svg";
 import logoutIcon from "../assets/images/icons/menuicons/logout.svg";
 import GlobalContext from "../contexts/GlobalContext";
 
-export default function Sidenav() {
+export default function Sidenav(props) {
   return (
     <React.Fragment>
       <GlobalContext.Consumer>
@@ -56,76 +57,77 @@ export default function Sidenav() {
               </div>
               <ul className="side-menu">
                 <li className="menu-item item-active">
-                  <a href="./index" className="menu-link pl">
+                  <Link to="/gram" className="menu-link pl">
                     <img src={menuIcon} alt="menu icon" className="link-icon" />
                     Feed
-                  </a>
+                  </Link>
                 </li>
                 <li className="menu-item">
-                  <a href="./index" className="menu-link pl">
+                  <Link to="/gram/explore" className="menu-link pl">
                     <img
                       src={searchIcon}
                       alt="Explore icon"
                       className="link-icon"
                     />
                     Explore
-                  </a>
+                  </Link>
                 </li>
                 <li className="menu-item">
-                  <a href="../index" className="menu-link pl">
+                  <Link to="/" className="menu-link pl">
                     <img
                       src={notificationIcon}
                       alt="Notifications icon"
                       className="link-icon"
                     />
                     Notifications
-                  </a>
+                  </Link>
                 </li>
                 <li className="menu-item">
-                  <a href="./index" className="menu-link pl">
+                  <Link to="/" className="menu-link pl">
                     <img
                       src={messagesIcon}
                       alt="Messages icon"
                       className="link-icon"
                     />
                     Messages
-                  </a>
+                  </Link>
                 </li>
                 <li className="menu-item">
-                  <a href="./index" className="menu-link pl">
+                  <Link to="/" className="menu-link pl">
                     <img src={dmIcon} alt="Dm icon" className="link-icon" />
                     Direct
-                  </a>
+                  </Link>
                 </li>
                 <li className="menu-item">
-                  <a href="./index" className="menu-link pl">
+                  <Link to="/" className="menu-link pl">
                     <img
                       src={statsIcon}
                       alt="Stats icon"
                       className="link-icon"
                     />
                     Stats
-                  </a>
+                  </Link>
                 </li>
                 <li className="menu-item">
-                  <a href="./index" className="menu-link pl">
+                  <Link to="/" className="menu-link pl">
                     <img
                       src={settingsIcon}
                       alt="Settings icon"
                       className="link-icon"
                     />
                     Settings
-                  </a>
+                  </Link>
                 </li>
                 <li className="menu-item logout">
-                  <a href="./index" className="menu-link pl">
+                  <Link to="/" className="menu-link pl">
+                    {" "}
                     <img
                       src={logoutIcon}
                       alt="Logout icon"
                       className="link-icon"
                     />
                     Logout
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </section>

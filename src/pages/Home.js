@@ -1,7 +1,8 @@
 import React from "react";
-import brandLogo from "../assets/images/icons/instagram.svg";
+import { Link } from "react-router-dom";
 import hdImage from "../assets/images/hdimage.png";
 import playIcon from "../assets/images/icons/play.svg";
+import Brand from "../components/Brand";
 import "../sass/main.scss";
 
 function App() {
@@ -9,10 +10,7 @@ function App() {
     <div className="Home">
       <header>
         <nav>
-          <span className="brand">
-            <img src={brandLogo} alt="Gram icon" className="icon brand-icon" />
-            <p className="brand-name">Gram</p>
-          </span>
+          <Brand />
           <ul className="nav-links">
             <li className="nav-item">
               <a href="../../index.html" className="nav-link ps help">
@@ -41,7 +39,7 @@ function App() {
             </p>
             <div className="ctaz">
               <button className="btn-prim upgrade-button">
-                <a href="./feed.html">Upgrade now</a>
+                <Link to="/gram">Upgrade now</Link>
               </button>
               <button className="icon-btn">
                 <span>
