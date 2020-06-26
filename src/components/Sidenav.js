@@ -6,9 +6,7 @@ import closeIcon from "../assets/images/icons/menuicons/cancel.svg";
 import menuIcon from "../assets/images/icons/menuicons/menu.svg";
 import searchIcon from "../assets/images/icons/menuicons/loupe.svg";
 import notificationIcon from "../assets/images/icons/menuicons/bell.svg";
-import messagesIcon from "../assets/images/icons/menuicons/envelope.svg";
 import dmIcon from "../assets/images/icons/menuicons/send.svg";
-import statsIcon from "../assets/images/icons/menuicons/barchart.svg";
 import settingsIcon from "../assets/images/icons/menuicons/settings.svg";
 import logoutIcon from "../assets/images/icons/menuicons/logout.svg";
 import GlobalContext from "../contexts/GlobalContext";
@@ -73,7 +71,7 @@ export default function Sidenav(props) {
                   </Link>
                 </li>
                 <li className="menu-item">
-                  <Link to="/" className="menu-link pl">
+                  <Link to="/gram/notifications" className="menu-link pl">
                     <img
                       src={notificationIcon}
                       alt="Notifications icon"
@@ -84,28 +82,8 @@ export default function Sidenav(props) {
                 </li>
                 <li className="menu-item">
                   <Link to="/" className="menu-link pl">
-                    <img
-                      src={messagesIcon}
-                      alt="Messages icon"
-                      className="link-icon"
-                    />
-                    Messages
-                  </Link>
-                </li>
-                <li className="menu-item">
-                  <Link to="/" className="menu-link pl">
                     <img src={dmIcon} alt="Dm icon" className="link-icon" />
                     Direct
-                  </Link>
-                </li>
-                <li className="menu-item">
-                  <Link to="/" className="menu-link pl">
-                    <img
-                      src={statsIcon}
-                      alt="Stats icon"
-                      className="link-icon"
-                    />
-                    Stats
                   </Link>
                 </li>
                 <li className="menu-item">
