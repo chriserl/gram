@@ -1,0 +1,45 @@
+.notifications {
+  .notifications-list {
+    width: 92.5%;
+    margin: $space-36 auto 0 $space-8;
+
+    @include mediaMd {
+      width: 75%;
+      margin: $space-36 auto 0 $space-48;
+
+      .notification-item {
+        width: 75%;
+      }
+    }
+
+    .notification-item {
+      width: max-content;
+      @include flex;
+      align-items: flex-start;
+      padding: $space-24 $space-48 $space-24 $space-24;
+      border-radius: $space-24;
+      margin-bottom: $space-8;
+      transition: all ease-in 0.25s;
+
+      &:hover {
+        @include light-shadow;
+      }
+
+      .notification-user-image {
+        width: $space-56;
+        height: $space-56;
+        border-radius: 50%;
+        margin-right: $space-24;
+        @include light-shadow;
+      }
+
+      .notification-title {
+        width: 94.5%;
+        justify-content: space-between;
+        @include flex;
+        align-items: baseline;
+        margin-bottom: $space-10;
+      }
+    }
+  }
+}

@@ -4,6 +4,7 @@ import GlobalContext from "../contexts/GlobalContext";
 import Sidenav from "../components/Sidenav";
 import FeedView from "../views/Feed";
 import Explore from "../views/Explore";
+import Notifications from "../views/Notifications";
 import "../sass/main.scss";
 
 class App extends React.Component {
@@ -39,6 +40,10 @@ class App extends React.Component {
               <Route
                 path={`${this.props.match.url}/explore`}
                 component={Explore}
+              ></Route>
+              <Route
+                path={`${this.props.match.url}/notifications`}
+                component={Notifications}
               ></Route>
             </main>
           </div>
