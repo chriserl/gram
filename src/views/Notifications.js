@@ -29,7 +29,8 @@ function Notifications() {
             </div>
 
             <p className="ps notification-text">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Lorem, ipsum dolor sit amet consectetur adipisicing functional
+              elit.
             </p>
           </div>
         </li>
@@ -42,7 +43,8 @@ function Notifications() {
             </div>
 
             <p className="ps notification-text">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Lorem, ipsum dolor sit plato man oi amet consectetur adipisicing
+              elit.
             </p>
           </div>
         </li>

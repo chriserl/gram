@@ -4,7 +4,7 @@
     margin: $space-36 auto 0 $space-8;
 
     @include mediaMd {
-      width: 75%;
+      width: 65%;
       margin: $space-36 auto 0 $space-48;
 
       .notification-item {
@@ -13,16 +13,20 @@
     }
 
     .notification-item {
-      width: max-content;
+      width: 100%;
       @include flex;
       align-items: flex-start;
       padding: $space-24 $space-48 $space-24 $space-24;
       border-radius: $space-24;
       margin-bottom: $space-8;
-      transition: all ease-in 0.25s;
+      transition: all ease-in 0.1s;
+
+      @include mediaMd {
+        width: 65%;
+      }
 
       &:hover {
-        @include light-shadow;
+        @include lighter-shadow;
       }
 
       .notification-user-image {
@@ -34,11 +38,16 @@
       }
 
       .notification-title {
-        width: 94.5%;
+        width: 100%;
         justify-content: space-between;
         @include flex;
         align-items: baseline;
         margin-bottom: $space-10;
+      }
+
+      .notification-text {
+        width: 100%;
+        line-height: $space-24;
       }
     }
   }

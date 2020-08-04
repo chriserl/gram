@@ -46,6 +46,11 @@
 }
 
 //Buttons
+
+button {
+  cursor: pointer;
+}
+
 .btn-prim {
   @include psb;
   @include button;
@@ -80,13 +85,13 @@
 .btn-light {
   @include ps;
   @include button;
-  @include light-shadow;
+  @include lighter-shadow;
   padding: $space-12 $space-24;
   color: $prim-dark;
   background: white;
 
   &:hover {
-    color: $gray-text;
+    @include light-shadow;
   }
 }
 
@@ -129,6 +134,7 @@
   border-radius: 50%;
   padding: 1.75px;
   z-index: -1;
+  cursor: pointer;
 
   .profile-image {
     width: $space-120;
@@ -142,6 +148,7 @@
 //Story circle
 .story-item {
   list-style-type: none;
+  cursor: pointer;
 
   .profile-image {
     @include light-shadow;
@@ -237,6 +244,7 @@ nav {
   }
 
   .nav-icon {
+    cursor: pointer;
     @extend .standard-icon;
   }
 
@@ -245,9 +253,14 @@ nav {
     @include flex-center;
 
     .nav-item {
-      padding: $space-4;
+      padding: $space-12;
       margin: 0 $space-12;
       list-style-type: none;
+      cursor: pointer;
+
+      img {
+        width: $space-24;
+      }
 
       .help {
         color: $prim-dark;

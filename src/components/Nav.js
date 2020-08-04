@@ -38,7 +38,7 @@ export default function Nav(props) {
               alt="notifications icon"
               className="nav-icon link-icon"
             />
-            <span className="h2">&middot;</span>
+            {props.msgNotif === true && <span className="h2">&middot;</span>}
           </li>
           <li className="nav-item">
             <img
@@ -46,7 +46,7 @@ export default function Nav(props) {
               alt="Messages icon"
               className="nav-icon link-icon"
             />
-            <span className="h2">&middot;</span>
+            {props.genNotif === true && <span className="h2">&middot;</span>}
           </li>
           <li className="nav-item">
             <button className="btn-prim">Add photo</button>

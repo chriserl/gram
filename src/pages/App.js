@@ -7,26 +7,40 @@ import Explore from "../views/Explore";
 import Notifications from "../views/Notifications";
 import "../sass/main.scss";
 
+//data imports
+import profileImage from "../assets/images/profileimages/jade.jpg";
+
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      sideNavState: "profile-inactive",
+      sideNavState: "sidenav-inactive",
+      msgNotifState: true,
+      genNotifState: true,
+      profileState: {
+        profileImage: profileImage,
+        hasStory: true,
+        profileName: "Unjaded Jade",
+        profileLink: "jade",
+        postsNum: 46,
+        followersNum: "2.8k",
+        followingNum: 526,
+      },
+      currView: "feed",
     };
   }
 
-  toggleSidenav = () => {
+  toggleSn = () => {
     this.state.sideNavState === ""
-      ? this.setState((oldState) => ({ sideNavState: "profile-inactive" }))
+      ? this.setState((oldState) => ({ sideNavState: "sidenav-inactive" }))
       : this.setState((oldState) => ({ sideNavState: "" }));
-    console.log(this.state.sideNavState);
   };
 
   render() {
     return (
       <BrowserRouter>
         <GlobalContext.Provider
-          value={{ state: this.state, toggleSidenav: this.toggleSidenav }}
+          value={{ state: this.state, toggleSn: this.toggleSn }}
         >
           <div className="feed">
             <Sidenav />

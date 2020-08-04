@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Brand from "./Brand";
-import profileImage from "../assets/images/profileimages/jade.jpg";
 import closeIcon from "../assets/images/icons/menuicons/cancel.svg";
 import menuIcon from "../assets/images/icons/menuicons/menu.svg";
 import searchIcon from "../assets/images/icons/menuicons/loupe.svg";
@@ -11,106 +10,131 @@ import settingsIcon from "../assets/images/icons/menuicons/settings.svg";
 import logoutIcon from "../assets/images/icons/menuicons/logout.svg";
 import GlobalContext from "../contexts/GlobalContext";
 
-export default function Sidenav(props) {
+export default function Sidenav() {
+  const [sideLinks, setSideLinks] = useState(() => ({
+    feed: {
+      name: "Feed",
+      link: "",
+      className: "item-active",
+      img: menuIcon,
+    },
+    explore: {
+      name: "Explore",
+      link: "explore",
+      className: "",
+      img: searchIcon,
+    },
+    notifications: {
+      name: "Notifications",
+      link: "notifications",
+      className: "",
+      img: notificationIcon,
+    },
+    direct: {
+      name: "Direct",
+      link: "",
+      className: "dms",
+      img: dmIcon,
+    },
+    settings: {
+      name: "Settings",
+      link: "",
+      className: "settings",
+      img: settingsIcon,
+    },
+    logout: {
+      name: "Logout",
+      link: "logout",
+      className: "logout",
+      img: logoutIcon,
+    },
+  }));
+
+  const changeActive = (link) => {
+    setSideLinks((prevLinks) => {
+      Object.keys(prevLinks).forEach((key) => {
+        prevLinks[key].className = "";
+      });
+      prevLinks[link].className = `${prevLinks[link].className} item-active`;
+      return { ...prevLinks };
+    });
+  };
   return (
     <React.Fragment>
       <GlobalContext.Consumer>
-        {(globalStore) => (
-          <aside className={globalStore.state.sideNavState}>
-            <div className="aside-header">
-              <Brand />
-              <span className="close-ham" onClick={globalStore.toggleSidenav}>
-                <img
-                  src={closeIcon}
-                  alt="close sidemenu icon"
-                  className="link-icon"
-                />
-              </span>
-            </div>
-            <section className="profile-content">
-              <div className="profile-summary">
-                <div className="story-unseen image">
+        {(contextState) => {
+          let state = contextState.state;
+          return (
+            <aside className={contextState.state.sideNavState}>
+              <div className="aside-header">
+                <Brand locale="./gram" />
+                <span className="close-ham" onClick={contextState.toggleSn}>
                   <img
-                    src={profileImage}
-                    alt="Profile"
-                    className="profile-image"
+                    src={closeIcon}
+                    alt="close sidemenu icon"
+                    className="link-icon"
                   />
+                </span>
+              </div>
+              <section className="profile-content">
+                <div className="profile-summary">
+                  <div className="story-unseen image">
+                    <img
+                      src={state.profileState.profileImage}
+                      alt="Profile"
+                      className="profile-image"
+                    />
+                  </div>
+                  <p className="profile-name h4">
+                    {state.profileState.profileName}
+                  </p>
+                  <p className="profile-link ps">{`@${state.profileState.profileLink}`}</p>
                 </div>
-                <p className="profile-name h4">Unjaded Jade</p>
-                <p className="profile-link ps">@jade</p>
-              </div>
-              <div className="profile-stats">
-                <span className="posts stat">
-                  <p className="posts-number plb">46</p>
-                  <p className="ps stat-name">Posts</p>
-                </span>
-                <span className="followers stat">
-                  <p className="followers-number plb">2.8k</p>
-                  <p className="ps stat-name">Followers</p>
-                </span>
-                <span className="following stat">
-                  <p className="following-number plb">526</p>
-                  <p className="ps stat-name">Following</p>
-                </span>
-              </div>
-              <ul className="side-menu">
-                <li className="menu-item item-active">
-                  <Link to="/gram" className="menu-link pl">
-                    <img src={menuIcon} alt="menu icon" className="link-icon" />
-                    Feed
-                  </Link>
-                </li>
-                <li className="menu-item">
-                  <Link to="/gram/explore" className="menu-link pl">
-                    <img
-                      src={searchIcon}
-                      alt="Explore icon"
-                      className="link-icon"
-                    />
-                    Explore
-                  </Link>
-                </li>
-                <li className="menu-item">
-                  <Link to="/gram/notifications" className="menu-link pl">
-                    <img
-                      src={notificationIcon}
-                      alt="Notifications icon"
-                      className="link-icon"
-                    />
-                    Notifications
-                  </Link>
-                </li>
-                <li className="menu-item">
-                  <Link to="/" className="menu-link pl">
-                    <img src={dmIcon} alt="Dm icon" className="link-icon" />
-                    Direct
-                  </Link>
-                </li>
-                <li className="menu-item">
-                  <Link to="/" className="menu-link pl">
-                    <img
-                      src={settingsIcon}
-                      alt="Settings icon"
-                      className="link-icon"
-                    />
-                    Settings
-                  </Link>
-                </li>
-                <li className="menu-item logout">
-                  <Link to="/" className="menu-link pl">
-                    {" "}
-                    <img
-                      src={logoutIcon}
-                      alt="Logout icon"
-                      className="link-icon"
-                    />
-                    Logout
-                  </Link>
-                </li>
-              </ul>
-            </section>
-          </aside>
-        )}
+                <div className="profile-stats">
+                  <span className="posts stat">
+                    <p className="posts-number plb">
+                      {state.profileState.postsNum}
+                    </p>
+                    <p className="ps stat-name">Posts</p>
+                  </span>
+                  <span className="followers stat">
+                    <p className="followers-number plb">
+                      {state.profileState.followersNum}
+                    </p>
+                    <p className="ps stat-name">Followers</p>
+                  </span>
+                  <span className="following stat">
+                    <p className="following-number plb">
+                      {state.profileState.followingNum}
+                    </p>
+                    <p className="ps stat-name">Following</p>
+                  </span>
+                </div>
+                <ul className="side-menu">
+                  {Object.keys(sideLinks).map((sideLink) => (
+                    <li
+                      onClick={() => changeActive(sideLink)}
+                      className={`menu-item ${sideLinks[sideLink].className}`}
+                      key={sideLinks[sideLink].name}
+                    >
+                      <Link
+                        to={`/gram/${sideLinks[sideLink].link}`}
+                        className="menu-link pl"
+                      >
+                        <img
+                          src={sideLinks[sideLink].img}
+                          alt="menu icon"
+                          className="link-icon"
+                        />
+                        {sideLinks[sideLink].name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            </aside>
+          );
+        }}
       </GlobalContext.Consumer>
     </React.Fragment>
   );

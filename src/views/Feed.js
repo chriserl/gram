@@ -73,9 +73,13 @@ export default class FeedView extends React.Component {
     return (
       <div className="feed-view">
         <GlobalContext.Consumer>
-          {(globalStore) => (
+          {(contextState) => (
             <React.Fragment>
-              <Nav toggleSidenav={globalStore.toggleSidenav} />
+              <Nav
+                toggleSidenav={contextState.toggleSn}
+                msgNotif={contextState.state.msgNotifState}
+                genNotif={contextState.state.genNotifState}
+              />
               <Stories />
               <section className="feed">
                 <p className="section-title h3">Feed</p>

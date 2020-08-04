@@ -10,7 +10,7 @@ function App() {
     <div className="Home">
       <header>
         <nav>
-          <Brand />
+          <Brand locale="./" />
           <ul className="nav-links">
             <li className="nav-item">
               <a href="../../index.html" className="nav-link ps help">
@@ -19,7 +19,7 @@ function App() {
             </li>
             <li className="nav-item">
               <a href="../../index.html" className="nav-link">
-                <button className="btn-sec">Upgrade now</button>
+                <button className="btn-sec">Sign up</button>
               </a>
             </li>
           </ul>
@@ -39,14 +39,9 @@ function App() {
             </p>
             <div className="ctaz">
               <button className="btn-prim upgrade-button">
-                <Link to="/gram">Upgrade now</Link>
+                <Link to="/gram">Sign up</Link>
               </button>
-              <button className="icon-btn">
-                <span>
-                  <img src={playIcon} alt="play" className="btn-icon" />
-                </span>
-                Watch now
-              </button>
+              <button className="btn-light login">Login</button>
             </div>
           </div>
         </section>
