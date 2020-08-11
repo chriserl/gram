@@ -30,18 +30,19 @@ export default function Sidenav() {
       className: "",
       img: notificationIcon,
     },
+
     direct: {
       name: "Direct",
-      link: "",
+      link: "direct",
       className: "dms",
       img: dmIcon,
     },
-    settings: {
-      name: "Settings",
-      link: "",
-      className: "settings",
-      img: settingsIcon,
-    },
+    // settings: {
+    //   name: "Settings",
+    //   link: "",
+    //   className: "settings",
+    //   img: settingsIcon,
+    // },
     logout: {
       name: "Logout",
       link: "logout",

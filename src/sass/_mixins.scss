@@ -48,6 +48,12 @@
   }
 }
 
+@mixin mediaLd {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
 //Base button
 @mixin button {
   border: none;

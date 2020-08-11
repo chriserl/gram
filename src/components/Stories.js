@@ -46,7 +46,7 @@ export default function Stories() {
             </div>
           </li>
           {stories.map((story) => (
-            <li className="story-item">
+            <li className="story-item" key={story.storyUserName}>
               <div className={`${story.storyState} image`}>
                 <img
                   src={story.storyUserImg}

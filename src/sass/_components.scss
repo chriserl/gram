@@ -364,3 +364,136 @@ nav {
     }
   }
 }
+
+//Chat List
+.chat-list {
+  padding-top: $space-24;
+  width: 100%;
+  @include mediaLd {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .chat-items {
+    width: 100%;
+
+    .chat-item {
+      width: 100%;
+      list-style-type: none;
+      @include flex;
+      align-items: flex-start;
+      margin: $space-16 0;
+      padding: $space-18 $space-28 $space-18 0;
+      border-radius: $space-12;
+
+      .profile-img {
+        @include lighter-shadow;
+        width: $space-64;
+        border-radius: 50%;
+        border: $space-4 solid $prim-light;
+      }
+      .chat-info {
+        width: 100%;
+        margin-left: $space-16;
+        padding-top: $space-6;
+
+        .chat-title {
+          @include flex-center;
+          justify-content: space-between;
+          margin-bottom: $space-12;
+        }
+      }
+    }
+  }
+}
+
+.chats-invisible {
+  display: none;
+
+  @include mediaLd {
+    display: block;
+  }
+}
+
+//Chat Board
+.chat-board {
+  height: 75vh;
+  width: 100%;
+  @include flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: scroll;
+  padding: $space-24 $space-20;
+
+  @include mediaLd {
+    @include scrollHide;
+  }
+  //background-color: yellow;
+
+  .chat-board-nav {
+    @include flex;
+    align-items: flex-start;
+
+    .btn-icon {
+      width: $space-24;
+
+      @include mediaLd {
+        display: none;
+      }
+    }
+
+    .profile-info {
+      margin-left: $space-32;
+      @include mediaLd {
+        margin-left: 0;
+      }
+
+      .profile-name {
+        margin-bottom: $space-4;
+      }
+    }
+  }
+
+  .chat {
+    width: 100%;
+    height: 100%;
+    @include flex;
+
+    .chat-bar {
+      width: 100%;
+      position: fixed;
+      margin-top: auto;
+      margin-left: $space-24;
+      bottom: 5.5%;
+
+      .chat-form {
+        width: max-content;
+        @include flex;
+
+        input {
+          width: 100%;
+        }
+
+        .icon {
+          width: $space-28;
+        }
+
+        .emoji-icon {
+          margin-right: $space-18;
+        }
+
+        .send-icon {
+          margin-left: $space-48;
+        }
+      }
+    }
+  }
+}
+
+.board-invisible {
+  display: none;
+
+  @include mediaLd {
+    display: block;
+  }
+}
