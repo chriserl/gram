@@ -7,8 +7,9 @@ import Home from "./pages/Home";
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Route exact path="/" component={Home}></Route>
-      <Route path="/gram" component={App}></Route>
+      <Route exact path="/" component={Home} />
+      <Route path="/index.html" component={Home} />
+      <Route path="/gram" component={App} />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
