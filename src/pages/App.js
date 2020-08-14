@@ -5,7 +5,6 @@ import Sidenav from "../components/Sidenav";
 import FeedView from "../views/Feed";
 import Explore from "../views/Explore";
 import Notifications from "../views/Notifications";
-import Direct from "../views/Direct";
 import "../sass/main.scss";
 
 //data imports
@@ -59,10 +58,6 @@ class App extends React.Component {
               <Route
                 path={`${this.props.match.url}/notifications`}
                 component={Notifications}
-              ></Route>
-              <Route
-                path={`${this.props.match.url}/direct`}
-                component={Direct}
               ></Route>
             </main>
           </div>
