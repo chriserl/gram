@@ -1,5 +1,10 @@
 .saved-posts {
-  padding: $space-36 $space-64;
+  width: 100%;
+  padding: $space-24 $space-12;
+
+  @include mediaLd {
+    padding: $space-36 $space-64;
+  }
 
   .profile-area {
     @include flex;
@@ -7,7 +12,7 @@
     margin-top: $space-48;
 
     .profile-img {
-      width: 6.5rem;
+      width: 6.75rem;
       border-radius: 50%;
       border: 1.75px solid $secondary-color;
       padding: $space-8;
@@ -18,14 +23,36 @@
       margin-top: $space-12;
 
       .profile-name {
-        margin-bottom: $space-6;
+        margin-bottom: $space-4;
         font-family: PoppinsLight;
       }
 
       .profile-link {
         color: $gray-text;
-        margin-bottom: $space-24;
+        margin-bottom: $space-12;
       }
+    }
+  }
+
+  .posts-section {
+    width: 98.5%;
+    margin: 0 auto;
+    margin-top: $space-96;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+    grid-gap: $space-24;
+
+    @include mediaMd {
+      width: 94.5%;
+      margin: 0 auto 0 0;
+      margin-top: $space-72;
+    }
+
+    @include mediaLd {
+      width: 80%;
+      grid-gap: $space-48;
+      margin-top: $space-72;
+      //grid-template-rows: 275px;
     }
   }
 }

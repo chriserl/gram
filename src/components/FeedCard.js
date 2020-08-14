@@ -9,7 +9,7 @@ export default function FeedCard(props) {
 
   return (
     <React.Fragment>
-      <span className="feed-card plb">
+      <span className={`feed-card plb ${props.mode}`}>
         <img src={postInfo.postImage} alt="feed" className="feed-image" />
         <div className="feed-controls">
           <div className="post-user">
