@@ -3,7 +3,7 @@ import Nav from "../components/Nav";
 import image from "../assets/images/profileimages/prof11.jpg";
 import GlobalContext from "../contexts/GlobalContext";
 
-function Notifications() {
+export default function Notifications() {
   return (
     <GlobalContext.Consumer>
       {(contextState) => (
@@ -75,5 +75,3 @@ function Notifications() {
     </GlobalContext.Consumer>
   );
 }
-
-export default Notifications;

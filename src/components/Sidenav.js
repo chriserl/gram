@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Brand from "./Brand";
 import closeIcon from "../assets/images/icons/menuicons/cancel.svg";
 import menuIcon from "../assets/images/icons/menuicons/menu.svg";
 import searchIcon from "../assets/images/icons/menuicons/loupe.svg";
 import notificationIcon from "../assets/images/icons/menuicons/bell.svg";
-import dmIcon from "../assets/images/icons/menuicons/send.svg";
-import settingsIcon from "../assets/images/icons/menuicons/settings.svg";
 import logoutIcon from "../assets/images/icons/menuicons/logout.svg";
+import saveIcon from "../assets/images/icons/menuicons/saved.svg";
 import GlobalContext from "../contexts/GlobalContext";
 
 export default function Sidenav() {
@@ -29,6 +28,12 @@ export default function Sidenav() {
       link: "notifications",
       className: "",
       img: notificationIcon,
+    },
+    saved: {
+      name: "Saved",
+      link: "saved",
+      className: "",
+      img: saveIcon,
     },
     logout: {
       name: "Logout",
@@ -105,7 +110,7 @@ export default function Sidenav() {
                       className={`menu-item ${sideLinks[sideLink].className}`}
                       key={sideLinks[sideLink].name}
                     >
-                      <Link
+                      <NavLink
                         to={`/gram/${sideLinks[sideLink].link}`}
                         className="menu-link pl"
                       >
@@ -115,7 +120,7 @@ export default function Sidenav() {
                           className="link-icon"
                         />
                         {sideLinks[sideLink].name}
-                      </Link>
+                      </NavLink>
                     </li>
                   ))}
                 </ul>

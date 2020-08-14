@@ -1,0 +1,31 @@
+.saved-posts {
+  padding: $space-36 $space-64;
+
+  .profile-area {
+    @include flex;
+    align-items: flex-start;
+    margin-top: $space-48;
+
+    .profile-img {
+      width: 6.5rem;
+      border-radius: 50%;
+      border: 1.75px solid $secondary-color;
+      padding: $space-8;
+    }
+
+    .profile-info {
+      margin-left: $space-24;
+      margin-top: $space-12;
+
+      .profile-name {
+        margin-bottom: $space-6;
+        font-family: PoppinsLight;
+      }
+
+      .profile-link {
+        color: $gray-text;
+        margin-bottom: $space-24;
+      }
+    }
+  }
+}

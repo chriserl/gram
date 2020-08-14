@@ -5,6 +5,7 @@ import Sidenav from "../components/Sidenav";
 import FeedView from "../views/Feed";
 import Explore from "../views/Explore";
 import Notifications from "../views/Notifications";
+import SavedPosts from "../views/Saved";
 import "../sass/main.scss";
 
 //data imports
@@ -58,6 +59,10 @@ class App extends React.Component {
               <Route
                 path={`${this.props.match.url}/notifications`}
                 component={Notifications}
+              ></Route>
+              <Route
+                path={`${this.props.match.url}/saved`}
+                component={SavedPosts}
               ></Route>
             </main>
           </div>
